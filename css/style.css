@@ -10,7 +10,7 @@
     --main-bg-color: #000000;
 }
 [data-contexto="lobos"]{
-    --main-bg-color: linear-gradient(#2B2B2B, #6C3428);
+    --main-bg-color: linear-gradient(#5A5A5A, #B7B7B7#);
 }
 [data-contexto="anti-heroi"]{
     --main-bg-color: linear-gradient(#003B41, #000000);
@@ -19,7 +19,7 @@
     --main-bg-color: linear-gradient(#000000, #176B87);
 }
 [data-contexto="super"]{
-    --main-bg-color: linear-gradient(#FF8C00, #FF4500,#000000);
+    --main-bg-color: linear-gradient(#496C81,#C0C4E6);
 }
 [data-contexto="contato"]{
     --main-bg-color: linear-gradient(#9eddff, #6573a2);
