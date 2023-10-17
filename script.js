@@ -26,6 +26,10 @@ pirataBt.addEventListener('click', () => {
 superBt.addEventListener('click', () => {
     alteraAlbum('super')
 })
+capa.addEventListener('mouseover', ()=>{
+    
+})
+
 function alteraAlbum(album) {
     html.setAttribute('data-contexto', album)
     capa.setAttribute('src', `/assets/${album}.jpg`)
