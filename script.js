@@ -9,6 +9,7 @@ const titulo = document.querySelector('.album__titulo')
 const lista = document.querySelector('.album__lista')
 
 const playPauseBt = document.querySelector('.butao__play__pause')
+const playPauseIcon = document.querySelector('.icon')
 let musicaAtual
 const musicas = { 'lobos': '/assets/sons/lobos.mp3', 'anti-heroi': '/assets/sons/anti-heroi.mp3', 'pirata': '/assets/sons/pirata.mp3', 'super': '/assets/sons/super.mp3' }
 
@@ -33,13 +34,13 @@ superBt.addEventListener('click', () => {
     mouseInMouseOut('super')
 })
 
-function mouseInMouseOut(album){
+function mouseInMouseOut(album) {
 
-    capa.addEventListener('mouseover', ()=>{
+    capa.addEventListener('mouseover', () => {
         capa.setAttribute('src', `/assets/cartas/${album}.jpg`)
         capa.classList.add('carta')
     })
-    capa.addEventListener('mouseout', ()=>{
+    capa.addEventListener('mouseout', () => {
         capa.setAttribute('src', `/assets/${album}.jpg`)
         capa.classList.remove('carta')
     })
@@ -132,24 +133,27 @@ function alteraAlbum(album) {
     }
     playPauseBt.addEventListener('click', totogglePlayPause)
 }
-function alteramusica(album){
-        stopMusic()
-        const urlMusica = musicas[album]
-        musicaAtual = new Audio(urlMusica)
+function alteramusica(album) {
+    stopMusic()
+    const urlMusica = musicas[album]
+    musicaAtual = new Audio(urlMusica)
 }
-function stopMusic(){
-    if(musicaAtual){
+function stopMusic() {
+    if (musicaAtual) {
         musicaAtual.pause()
         musicaAtual = null
     }
 }
-function totogglePlayPause(){
-    if(musicaAtual){
-        if(musicaAtual.paused){
+function totogglePlayPause() {
+    if (musicaAtual) {
+        if (musicaAtual.paused) {
             musicaAtual.play()
+            playPauseBt.textContent = 'PAUSE'
+
         }
-        else{
+        else {
             musicaAtual.pause()
+            playPauseBt.textContent = 'PLAY'
         }
     }
 }
