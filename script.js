@@ -12,28 +12,45 @@ const playPauseBt = document.querySelector('.butao__play__pause')
 let musicaAtual
 const musicas = { 'lobos': '/assets/sons/lobos.mp3', 'anti-heroi': '/assets/sons/anti-heroi.mp3', 'pirata': '/assets/sons/pirata.mp3', 'super': '/assets/sons/super.mp3' }
 
-
 loboBt.addEventListener('click', () => {
     alteraAlbum('lobos')
     alteramusica('lobos')
+    mouseInMouseOut('lobos')
 })
 antiHeroiBt.addEventListener('click', () => {
     alteraAlbum('anti-heroi')
+    alteramusica('anti-heroi')
+    mouseInMouseOut('anti-heroi')
 })
 pirataBt.addEventListener('click', () => {
     alteraAlbum('pirata')
+    alteramusica('pirata')
+    mouseInMouseOut('pirata')
 })
 superBt.addEventListener('click', () => {
     alteraAlbum('super')
-})
-capa.addEventListener('mouseover', ()=>{
-    
+    alteramusica('super')
+    mouseInMouseOut('super')
 })
 
+function mouseInMouseOut(album){
+
+    capa.addEventListener('mouseover', ()=>{
+        capa.setAttribute('src', `/assets/cartas/${album}.jpg`)
+        capa.classList.add('carta')
+    })
+    capa.addEventListener('mouseout', ()=>{
+        capa.setAttribute('src', `/assets/${album}.jpg`)
+        capa.classList.remove('carta')
+    })
+
+}
 function alteraAlbum(album) {
     html.setAttribute('data-contexto', album)
     capa.setAttribute('src', `/assets/${album}.jpg`)
-    titulo.innerHTML = `${album}`    
+    titulo.innerHTML = `${album}`
+    stopMusic()
+
     switch (album) {
         case "lobos":
             lista.innerHTML = `
@@ -113,18 +130,26 @@ function alteraAlbum(album) {
         default:
             break;
     }
+    playPauseBt.addEventListener('click', totogglePlayPause)
 }
 function alteramusica(album){
-    playPauseBt.addEventListener('click', ()=>{
+        stopMusic()
         const urlMusica = musicas[album]
-
-        if(!musicaAtual){
-            musicaAtual = new Audio(urlMusica)
-        }
-        if (musicaAtual.paused){
+        musicaAtual = new Audio(urlMusica)
+}
+function stopMusic(){
+    if(musicaAtual){
+        musicaAtual.pause()
+        musicaAtual = null
+    }
+}
+function totogglePlayPause(){
+    if(musicaAtual){
+        if(musicaAtual.paused){
             musicaAtual.play()
-        }else{
+        }
+        else{
             musicaAtual.pause()
         }
-        })
+    }
 }
