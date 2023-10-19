@@ -148,12 +148,12 @@ function totogglePlayPause() {
     if (musicaAtual) {
         if (musicaAtual.paused) {
             musicaAtual.play()
-            playPauseBt.textContent = 'PAUSE'
+            playPauseBt.textContent = 'Pause'
 
         }
         else {
             musicaAtual.pause()
-            playPauseBt.textContent = 'PLAY'
+            playPauseBt.textContent = 'Play'
         }
     }
 }
