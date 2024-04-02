@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-contexto="Home">
+<html lang="pt-br" data-contexto="album">
 
 <head>
     <meta charset="UTF-8">
@@ -16,31 +16,25 @@
     <header class="cabecalho">
         <nav>
             <ul class="cabecalho__nav__lista">
-                <li><button class="cabecalho__butao butao__lobos">lobos</button> </li>
-                <li><button class="cabecalho__butao butao__anti-heroi">anti-heroi</button> </li>
-                <li><button class="cabecalho__butao butao__pirata">pirata</button> </li>
-                <li><button class="cabecalho__butao butao__super">super</button> </li>
+                <li><a href="index.html"><img src="assets/home.svg" alt=""></a></li>
+                <li><button class="cabecalho__butao butao__lobos"><a href="#lobos">lobos</a></button> </li>
+                <li><button class="cabecalho__butao butao__anti-heroi"><a href="#anti-heroi">anti-heroi</a></button> </li>
+                <li><button class="cabecalho__butao butao__pirata"><a href="#pirata">pirata</a></button> </li>
+                <li><button class="cabecalho__butao butao__super"><a href="#super">super</a></button> </li>
             </ul>
         </nav>
     </header>
     <section class="section">
         <div class="album">
-            <h1 class="album__titulo">Selecione um album <strong>acima</strong>.</h1>
+            <h1 id="" class="album__titulo">Selecione um album <strong>acima</strong>.</h1>
             <ul class="album__lista">
                 <li class="album__faixas"></li>
-
             </ul>
-            <button class="butao__play__pause"><img src="" alt="">PLAY</button>
+            <button class="butao__play__pause hidden"><img src="" alt="">PLAY</button>
         </div>
         <img class="capa__album" src="assets/Jao-aranha.jpeg" alt="">
     </section>
-    <footer>
-        <nav class="rodape__nav">
-            <a class="rodape__link" href="index.html">Home</a>
-            <a class="rodape__link" href="contact.html">Contato</a>
-            <a class="rodape__link" href="albuns.html">Albuns</a>
-        </nav>
-    </footer>
+    
 </body>
 
 </html>
