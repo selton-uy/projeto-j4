@@ -40,6 +40,7 @@
     border-radius: 50px;
     height: 10vh;
     width: 15vw;
+    min-width: 250px;
     
     display: flex;
     flex-direction: column;
@@ -86,4 +87,86 @@
     display: flex;
     justify-content: center;
     
+}
+
+@media (max-width: 1024px) {
+    .landing--div{
+        position: absolute;
+    }
+    .landing--img{
+        margin: 0 0 0 auto;
+    }
+    .landing--div-titulo{
+        font-size: 5rem;
+    }
+    .landing--div-sub-titulo{
+        font-size: 1.75rem;
+    }
+    .landing--butons{
+        gap: 1rem;
+    }
+    .landing--butons-itens{
+        width: 20vw;
+        font-size: 1.75rem;
+    }
+    .principal{
+        padding: 5%;
+    }
+    .principal__imagem{
+        height: 90vh;
+        object-fit: cover;
+    }
+    .principal__sobre__titulo{
+        font-size: 2rem;
+    }
+    .principal__sobre__texto{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    
+    .landing--butons{
+        flex-direction: column;
+        align-items: start;
+    }
+    .principal{
+        align-items: end;
+        gap: 1rem;
+    }
+    .principal__imagem{
+        height: 80vh;
+    }
+    .principal__sobre__titulo{
+        text-align: start;
+    }
+}
+@media (max-width: 480px) {
+    .landing{
+        flex-direction: row;
+    }
+    .landing--div-titulo{
+        font-size: 4rem;
+    }
+    .landing--div-sub-titulo{
+        font-size: 1.25rem;
+    }
+    .principal{
+        padding: auto;
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+    .principal__imagem{
+        width: 90vw;
+        height: 50vh;
+        margin-top: 2rem;
+    }
+    .principal__sobre__texto{
+        font-size: 1.25rem;
+        padding: 0 5%;
+    }
+    .principal__sobre__titulo{
+        padding: 4% 0;
+    }
 }

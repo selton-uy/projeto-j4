@@ -129,9 +129,37 @@ strong {
 .carta {
     width: 50vw;
     border-radius: 10px;
-    transition: ease-in 1s;
+    transition: ease-in-out 1s;
     padding-right: 6rem;
 }
 .cabecalho__butao a{
     color: var(--cor-da-fonte);
+}
+@media (max-width: 1024px){
+    .carta{
+        object-fit: cover;
+        width: 100%;
+        padding: 0;
+        max-height: 700px;
+    }
+}
+@media (max-width: 768px){
+    .carta{
+        width:100%;
+        height: 80vh;
+        
+    }
+}
+@media (max-width: 480px){
+    .section{
+        flex-direction: column-reverse;
+        padding: 2rem;
+    }
+    .capa__album{
+        width: 90vw;
+        height: 100%;
+    }
+    .butao__play__pause{
+        min-width: 250px;
+    }
 }

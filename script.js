@@ -51,6 +51,7 @@ function alteraAlbum(album) {
     capa.setAttribute('src', `/assets/${album}.jpg`)
     titulo.innerHTML = `${album}`
     titulo.setAttribute("id", album)
+    playPauseBt.innerHTML = 'PLAY'
     stopMusic()
 
     switch (album) {
