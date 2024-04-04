@@ -162,4 +162,16 @@ strong {
     .butao__play__pause{
         min-width: 250px;
     }
+    .cabecalho__nav__lista{
+        justify-content: space-evenly;
+    }
+    .cabecalho{
+        padding: 1rem 0;
+    }
+    .cabecalho__butao{
+        font-size: .75rem;
+    }
+    .cabecalho__butao:hover{
+        font-size: 0.75rem;
+    }
 }

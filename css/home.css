@@ -88,6 +88,20 @@
     justify-content: center;
     
 }
+.principal__sobre__titulo::after{
+    content: ":";
+}
+.inverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.buton{
+    margin: 0 auto;
+    color: var(--cor-da-fonte);
+    text-align: center;
+    text-transform: capitalize;
+    padding: 2%;
+}
 
 @media (max-width: 1024px) {
     .landing--div{
