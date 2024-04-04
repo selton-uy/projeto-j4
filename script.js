@@ -50,6 +50,8 @@ function alteraAlbum(album) {
     html.setAttribute('data-contexto', album)
     capa.setAttribute('src', `/assets/${album}.jpg`)
     titulo.innerHTML = `${album}`
+    titulo.setAttribute("id", album)
+    playPauseBt.innerHTML = 'PLAY'
     stopMusic()
 
     switch (album) {
@@ -66,6 +68,7 @@ function alteraAlbum(album) {
             <li class="album__faixas">aqui</li>
             <li class="album__faixas">monstros</li>
             `
+            playPauseBt.classList.remove("hidden")
             break;
         case "anti-heroi":
             lista.innerHTML = `
@@ -80,21 +83,9 @@ function alteraAlbum(album) {
             <li class="album__faixas">hotel san diego</li>
             <li class="album__faixas">:((nota de voz 8)</li>
             `
+            playPauseBt.classList.remove("hidden")
             break;
-        case "anti-heroi":
-            lista.innerHTML = `
-            <li class="album__faixas">ultima noite</li>
-            <li class="album__faixas">triste pra sempre</li>
-            <li class="album__faixas">enquanto me beija</li>
-            <li class="album__faixas">essa eu fiz pro nosso amor</li>
-            <li class="album__faixas">fim de festa</li>
-            <li class="album__faixas">barcelona</li>
-            <li class="album__faixas">você vai me destruir</li>
-            <li class="album__faixas">VSF</li>
-            <li class="album__faixas">hotel san diego</li>
-            <li class="album__faixas">:((nota de voz 8)</li>
-            `
-            break;
+
         case "pirata":
             lista.innerHTML = `
             <li class="album__faixas">clarão</li>
@@ -110,6 +101,7 @@ function alteraAlbum(album) {
             <li class="album__faixas">tempos de gloria</li>
             <li class="album__faixas">olhos vermelhos</li>
             `
+            playPauseBt.classList.remove("hidden")
             break;
         case "super":
             lista.innerHTML = `
@@ -127,6 +119,7 @@ function alteraAlbum(album) {
             <li class="album__faixas">são paulo, 2015</li>
             <li class="album__faixas">super</li>
             `
+            playPauseBt.classList.remove("hidden")
             break;
         default:
             break;
